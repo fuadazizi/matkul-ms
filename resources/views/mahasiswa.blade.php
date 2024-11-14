@@ -48,14 +48,16 @@
         </tr>
         <tr>
             <td>TEST Api</td>
-            <td> 
+            <td>
                 <a href="/api/mahasiswa" target="_blank">Get All</a><br>
                 <select id="get-selector">
                     @foreach($listmhs as $mhs)
                     <option value="{{ $mhs->id }}">{{ $mhs->id }}. {{ $mhs->nama }}</option>
                     @endforeach
                 </select>
+                @if($listmhs->first())
                 <a id="get-link" href="/api/mahasiswa/{{ $listmhs->first()->id }}" target="_blank">Get by Id</a>
+                @endif
             </td>
         </tr>
     </table>

@@ -59,7 +59,9 @@
                     </option>
                     @endforeach
                 </select>
+                @if($listjadwal->first())
                 <a id="get-link" href="/api/jadwalkuliah/{{ $listjadwal->first()->id }}" target="_blank">Get by Id</a>
+                @endif
             </td>
         </tr>
     </table>

@@ -54,7 +54,9 @@
                     <option value="{{ $matakuliah->id }}">{{ $matakuliah->id }}. {{ $matakuliah->nama }}</option>
                     @endforeach
                 </select>
+                @if($listmatakuliah->first())
                 <a id="get-link" href="/api/matakuliah/{{ $listmatakuliah->first()->id }}" target="_blank">Get by Id</a>
+                @endif
             </td>
         </tr>
     </table>

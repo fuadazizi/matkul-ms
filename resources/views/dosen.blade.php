@@ -54,7 +54,9 @@
                     <option value="{{ $dosen->id }}">{{ $dosen->id }}. {{ $dosen->nama }}</option>
                     @endforeach
                 </select>
+                @if($listdosen->first())
                 <a id="get-link" href="/api/dosen/{{ $listdosen->first()->id }}" target="_blank">Get by Id</a>
+                @endif
             </td>
         </tr>
     </table>
